@@ -53,11 +53,11 @@ class FormController extends Controller
     }
 
     function getforms() {
-        $form = Form::all();
-        if($form){
+        $forms = Form::all();
+        if($forms){
             return response()->json([
                 'message' => 'Get all forms success',
-                'forms' => $form
+                'forms' => $forms
             ], 200);
         }
 
